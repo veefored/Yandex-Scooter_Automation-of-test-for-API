@@ -1,3 +1,4 @@
+# SQL- запрос к базе данных
 scooter_rent-# \dt
 scooter_rent-# SELECT * FROM "Couriers";
 scooter_rent-# SELECT track, CASE WHEN finished = true THEN 2 ELSE 0 END FROM "Orders";
