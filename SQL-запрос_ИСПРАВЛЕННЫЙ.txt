@@ -1,0 +1,17 @@
+# SQL- запрос к базе данных
+
+ЗАДАНИЕ №1
+
+Запрос для просмотра созданных заказов:
+SELECT * from "Orders";
+
+Запрос для просмотра списка логинов (id) курьеров с количеством их заказов в статусе "В доставке":
+SELECT "courierId", "id" FROM "Orders" WHERE "inDelivery" = true; GROUP BY "courierId"
+
+ЗАДАНИЕ №2
+
+Статусы заказов в базе отображаются корректно:
+SELECT id FROM "Orders";
+
+Просмотр трэкеров заказов и их статусов:
+SELECT track, CASE WHEN "inDelivery" = true THEN 1 WHEN "cancelled" = true THEN -1 WHEN "finished" = true THEN 2 ELSE 0 END FROM "Orders";
